@@ -7,6 +7,7 @@ function drawGrid() {
 for (i = 0; i < gridSize ** 2; i++) {
     let cell = document.createElement("div")
     cell.setAttribute("class","cell")
+    cell.setAttribute("style", `height: ${960/gridSize-3}px; width:${960/gridSize-3}px`)
     cell.addEventListener("mouseenter", () => {
         cell.setAttribute("class", "cellFilled")
     })

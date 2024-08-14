@@ -1,17 +1,19 @@
 div {
     margin: 0px;
 }
-
+html {
+    display: flex;
+    flex-direction: column;
+}
 #container {
     display: flex;
     flex-wrap: wrap;
-    align-content: stretch;
-    width: 960px;
+    min-width: 960px;
+    max-width: 960px;
+    padding: 0px;
 }
 
 .cell {
-    width: 57px;
-    height: 57px;
     border-width: 1px;
     border-color: black;
     border-style: solid;
@@ -19,17 +21,8 @@ div {
 
 .cellFilled {
     background-color: black;
-    width: 57px;
-    height: 57px;
     border-width: 1px;
     border-color: black;
     border-style: solid;
 }
 
-#container div {
-    width: 57px;
-    height: 57px;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-}
