@@ -1,9 +1,10 @@
 div {
     margin: 0px;
 }
-html {
+body {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 #container {
     display: flex;
@@ -26,3 +27,6 @@ html {
     border-style: solid;
 }
 
+button {
+    margin: 5px;
+}
