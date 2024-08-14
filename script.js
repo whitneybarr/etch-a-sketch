@@ -1,16 +1,32 @@
 const container = document.querySelector("#container")
-const cell = document.createElement("div")
-cell.setAttribute("class","cell")
+let gridSize = 16
 
-for (i = 0; i < 256; i++) {
-    container.appendChild(cell.cloneNode(true));
-}
+const button = document.querySelector("button")
 
-const cells = document.querySelectorAll(".cell")
-
-for (const piece of cells) {
-    piece.addEventListener("mouseenter", () => {
-        console.log("hover")
-        piece.setAttribute("class", "cellFilled")
+function drawGrid() {
+for (i = 0; i < gridSize ** 2; i++) {
+    let cell = document.createElement("div")
+    cell.setAttribute("class","cell")
+    cell.addEventListener("mouseenter", () => {
+        cell.setAttribute("class", "cellFilled")
     })
-}
+    container.appendChild(cell);
+}}
+
+button.addEventListener("click", () => {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild)
+    }
+   gridSize = Number(prompt("How many squares per side?"))
+   if (gridSize > 100) {
+    alert("Too Many!")
+    } else {
+        drawGrid()
+    }
+})
+
+drawGrid()
+
+
+
+

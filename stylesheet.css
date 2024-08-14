@@ -25,3 +25,11 @@ div {
     border-color: black;
     border-style: solid;
 }
+
+#container div {
+    width: 57px;
+    height: 57px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
