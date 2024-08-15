@@ -3,7 +3,6 @@ let gridSize = 16
 
 const button = document.querySelector("button")
 
-
 function drawGrid() {
 for (i = 0; i < gridSize ** 2; i++) {
     let o = 0
@@ -17,12 +16,11 @@ for (i = 0; i < gridSize ** 2; i++) {
     container.appendChild(cell);
 }}
 
-
 button.addEventListener("click", () => {
     while (container.firstChild) {
         container.removeChild(container.lastChild)
     }
-   gridSize = Number(prompt("How many squares per side?"))
+   gridSize = Number(prompt("How many squares per side? (Must be less than 100)"))
    if (gridSize > 100) {
     alert("Too Many!")
     } else {
